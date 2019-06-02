@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function showHint() {
+
+
+    var str = document.getElementById("getxt").value;
+
+    if (str.length == 0) {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //alert(this.responseText);
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        }
+       xmlhttp.open("GET", "tria.php?val="+str, true);//?q="+str
+       xmlhttp.send(); 
+    }
+}
+</script>
+</head>
+<body>
+
+
+<form>
+First name: <input type="text" id="getxt">
+<input type="button" value="pata me" onclick="showHint()">
+</form>
+<p id="txtHint"></p>
+
+</body>
+</html>

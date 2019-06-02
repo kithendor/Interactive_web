@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function fun() {
+
+    var text = document.getElementById("txt").value;
+    var text2 = document.getElementById("txt2").value;
+
+    if (text.length == 0) {
+        document.getElementById("txt").innerHTML = "";
+        return;
+    } else {
+        
+        var xmlhttp = new XMLHttpRequest();
+       // xmlhttp.open("GET", "miden.php", true);
+        xmlhttp.open("GET", "duo.php?val="+text+"&val2="+text2, true);
+        xmlhttp.send(); 
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var res = this.responseText;
+                 
+                document.getElementById("res").innerHTML = res;
+              
+            }
+        }
+       
+    }
+}
+</script>
+</head>
+<body>
+
+
+<form>
+First name: <input type="text" id="txt"><br>
+Last name: <input type="text" id="txt2">
+<input type="button" value="pata" onclick="fun()">
+</form>
+<p id="res"></p>
+
+</body>
+</html>
