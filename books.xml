@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<store>
+	<book>
+		<Title>Lord of the rings</Title>
+		<Author>Tolkin</Author>
+	</book>
+	<book>
+		<Title>The black tower</Title>
+		<Title>Lord of the sdsd</Title>
+		<Author>King</Author>
+	</book>
+	<book>
+		<Title>Raven</Title>
+		<Author>Poe</Author>
+	</book>
+</store>
+

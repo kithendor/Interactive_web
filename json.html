@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="json.js"></script>
+</head>
+<body>
+	<input type="button" value ="det data" id="btn" onclick="getit()">
+	<input type="text" name="" id="setname" placeholder="City">
+	<div id="getdata1"></div>
+	<div id="getdata2"></div>
+	<div id="getdata3"><img src="" id="iconaki"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		var input = document.getElementById("setname");
+
+
+input.addEventListener("keyup", function(event) {
+
+  if (event.keyCode === 13) {
+    
+     event.preventDefault();
+  
+     document.getElementById("btn").click();
+    getit();
+  }
+}); 
+	</script>
+
+</body>
+</html>

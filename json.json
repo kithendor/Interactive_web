@@ -1,0 +1,10 @@
+{
+    "name":"John",
+    "age":31,
+    "players":["Giovianni","Pele","Messi"],
+    "animals":{"sea":"fish","sky":"bird"},
+    "cars":[
+    	{"brand":"toyota","type":"jeep"},
+    	{"brand":"skoda","type":"sedan"}
+    ]
+}
